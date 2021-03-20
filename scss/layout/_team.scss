@@ -1,0 +1,113 @@
+.team {
+    background-color: $color-background;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 94px;
+      padding-top: 94px;
+    }
+  }
+
+  .team-title {
+    color: $color-title;
+    @include font(28px, 700, 32px);
+    letter-spacing: 0.03em;
+  
+    text-align: center;
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      @include font(36px, 700, 42px);
+      margin-bottom: 50px;
+    }
+  }
+
+ 
+  .team-name {
+    color: $color-title;
+    @include font(16px, 500, 19px);
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .team-descript {
+    @media screen and (min-width: 768px) {
+      margin: -15px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .team-list {
+    background-color: $color-main;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    @media screen and (max-width: 767px) {
+      max-width: 480px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 4 * 30px) / 4);
+    }
+  }
+  .section-team-img {
+    width: 100%;
+    min-height: 260px;
+  }
+  .team-work {
+    color: $color-text;
+    @include font(16px, 400, 19px);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .team-name-title {
+    padding: 24px;
+  }
+
+
+  .social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color  $time-hover $cubic-for-all;
+    outline: none;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: $color-accent;
+    border-radius: 50%;
+}
+
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: $partners-color;
+  transition: fill background-color  $time-hover $cubic-for-all;
+  
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon  {
+      fill:$color-main;
+
+    } 
+
+  

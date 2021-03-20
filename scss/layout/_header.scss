@@ -1,0 +1,310 @@
+.header {
+    background-color: $color-main;
+} 
+
+
+
+
+.header-logo {
+    display: flex;
+
+    padding: 16px 0;
+
+    font-family: $logo-font-family;
+    @include font (24px, 700, 28px);
+    letter-spacing: 0.03em;
+
+    color: $color-title;
+
+    &-particle {
+        color: $color-accent;
+        }
+
+
+    @media screen and (min-width: 768px) {
+    margin-right: 88px;
+    padding: 26px 0;
+    }
+
+  @media screen and (min-width: 1200px) {
+    }
+}
+
+
+
+.navigation {
+     display: none;
+    @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    }
+}
+
+.menu-mobile {
+    position: relative;
+ 
+
+    padding: 10px 0;
+    margin: 0;
+    border: none;
+    color: $color-title;
+
+    background-color: transparent;
+    
+    &:hover,
+    &:focus {
+        outline: none;
+      fill: $color-accent;
+        }
+  
+    @media screen and (min-width: 768px) {
+      display: none;
+        }
+}
+
+    .close-menu-btn {
+
+        position: fixed;
+        right: 8px;
+        top: 8px;
+        background-color: transparent;
+        border: none;
+        color: $color-title;
+        padding: 0;
+        outline: none;
+    
+        &:hover,
+        &:focus {
+        color: $color-accent;
+        }
+}
+
+    .icon-close-btn {
+        fill: currentColor;
+        width: 40px;
+        height: 40px;
+}
+
+    @media screen and (max-width: 768px) {
+        .header-menu-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: $color-main;
+        height: 100vh;
+        width: 100%;
+        padding: 48px 40px;
+        z-index: 21;
+        overflow: auto;
+        transform: translateY(-100%);
+        transition: transform 700ms $cubic-for-all;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &.is-open {
+            transform: translateY(0);
+            }
+        }
+}
+
+    @media screen and (min-width: 768px) {
+    .header-menu-container {
+      display: none;
+        }
+}
+
+    .navigation-link, .navigation-link-active {
+    display: block;
+    text-align: center;
+    transition: color $time-hover $cubic-for-all;
+    @include font(25px, 500, 29px);
+    letter-spacing: 0.02em;
+
+    color: $color-title;
+  
+    &:focus,
+    &:hover {
+      color: $color-accent;
+        }
+
+  
+
+    @media screen and (min-width: 480px) {
+    @include font(40px, 500, 47px);
+        }
+
+    @media screen and (min-width: 768px) {
+    position: relative;
+    @include font(14px, 500, 16px);
+    padding: 32px 0;
+        }
+
+}
+
+    .navigation-list {
+        margin-bottom: 40px;
+        @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+        display: flex;
+        }
+        @media screen and (min-width: 1200px) {
+        margin-right: 304px;
+        }
+}
+
+    .navigation-list-item {
+        display: flex;
+        @media screen and (max-width: 767px) {
+         &:not(:last-child) {
+            margin-bottom: 32px;
+            }
+        }
+        @media screen and (min-width: 768px) {
+        &:not(:last-child) {
+            margin-right: 50px;
+            }
+        }
+}
+    .navigation-link-active {
+        color: $color-accent;
+}
+
+
+    @media screen and (min-width: 768px) {
+    .navigation-link-active::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $color-accent;
+      border-radius: 2px;
+      transform: scaleX(1);
+      transition: transform $time-hover $cubic-for-all;
+    }
+}
+
+    .social-list-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+    display: none;
+        }
+}
+
+    .social-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .social-list-links {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.122;
+    letter-spacing: 0.02em;
+    color: $color-accent;
+    @media screen and (min-width: 480px) {
+      font-size: 18px;
+        }
+}
+
+    .social-list-line {
+    background-color: rgba(33, 33, 33, 0.2);
+    width: 22px;
+    height: 1px;
+    transform: rotate(90deg);
+}
+
+
+.contact-link, .contact-link-accent {
+    display: block;
+    color: $color-text;
+
+    @include font(18px, 500, 20px);
+    letter-spacing: 0.02em;
+
+    color: $color-text;
+  
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+
+    @media screen and (min-width: 480px) {
+      @include font(24px, 500, 28px);
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        @include font(12px, 500, 14px);
+      
+    }
+    @media screen and (min-width: 1200px) {
+      @include font (14px, 500, 16px);
+      padding: 32px 0;
+    }
+  }
+  
+  .contact-item {
+    @media screen and (max-width: 767px) {
+      &:last-child {
+        margin-bottom: 32px;
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+  
+  .contact {
+    display: flex;
+  
+    @media screen and (max-width: 767px) {
+      flex-direction: column-reverse;
+      margin-bottom: 20px;
+    }
+  
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-left: 84px;
+      flex-direction: column;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+  }
+  
+  .contact-icon {
+    display: none;
+  
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        transition: fill var(--transition-duration) var(--transition-timing-function);
+        
+        fill: currentColor;
+    }
+  }
+  .contact-link-accent {
+    @media screen and (max-width: 767px) {
+      color: $color-accent;
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      color: $color-accent;
+      font-size: 34px;
+    }
+  }
